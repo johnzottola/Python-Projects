@@ -1,0 +1,47 @@
+
+class apple:
+    def __init__(self, pType, price):
+        self.__pType=pType
+        self.__price=price
+
+    def setpType(self, pType):
+        self.__pType=pType
+
+    def setprice(self,price):
+        self.__price=price
+
+    def getpType(self):
+        return self.__pType
+
+    def getprice(self):
+        return self.__price
+
+class mac(apple):
+    def __init__(self, pType= None, price = None, macType= None):
+        self.__macType=macType
+        super(mac, self).__init__(pType, price)
+
+    def setmacType(self, macType):
+        self.__macType=macType
+
+    def getmacType(self):
+        return self.__macType
+
+    def getprice(self):
+        if self.__macType=="11Inch":
+            return super(mac, self).getprice()*.9
+        elif self.__macType=="13Inch":
+            return super(mac, self).getprice()
+        elif self.__macType=="15Inch":
+            return super(mac, self).getprice()*1.1
+
+a1=apple("computer",1000)
+m1=mac("computer",1000,"11Inch")
+m2=mac("computer",1000,"13Inch")
+m3=mac("computer",1000,"15Inch")
+
+print("a1 is a ", a1.getpType(), " and it costs ", a1.getprice())
+print("m1 is ", m1.getmacType(), " mac and it costs ", m1.getprice())
+print("m2 is ", m2.getmacType(), " mac and it costs ", m2.getprice())
+print("m3 is ", m3.getmacType(), " mac and it costs ", m3.getprice())
+
