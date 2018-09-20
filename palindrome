@@ -1,0 +1,17 @@
+
+def checkpal(ustrlist1):
+    list2=ustrlist1
+    forward= list2
+    print(forward)
+    list2.reverse()
+    print(forward)
+    for i in list2:
+        
+            
+
+def main():
+    ustr = input("Please enter a string to check if it is a pallindrome: ")
+    ustrlist1 = list(ustr)
+    print(ustr, " is a pallindrome: ", checkpal(ustrlist1))
+
+main()
