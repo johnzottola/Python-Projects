@@ -1,0 +1,9 @@
+print("This program calculates the factorial using recursion")
+unum=int(input("Please enter a number: "))
+def recfact(num):
+    if num<=1:
+        return 1
+    else:
+        x=num*recfact(num-1)
+        return x
+print("Factorial of ",unum," = ", recfact(unum))
